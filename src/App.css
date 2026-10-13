@@ -1,0 +1,161 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff3ff, #83cfff);
+    color: #17324d;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(30, 90, 130, 0.18);
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #647b90;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+#weather-form {
+    display: flex;
+    gap: 8px;
+}
+
+#city-input {
+    min-width: 0;
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #c7ddeb;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#city-input:focus {
+    border-color: #168de2;
+    box-shadow: 0 0 0 3px rgba(22, 141, 226, 0.12);
+}
+
+button {
+    padding: 13px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #168de2;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0873bd;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+#message {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #c0392b;
+}
+
+.weather-result {
+    margin-top: 20px;
+    padding: 20px 12px;
+    border-radius: 16px;
+    background: #edf8ff;
+}
+
+#city-name {
+    font-size: 24px;
+}
+
+#local-time {
+    margin-top: 7px;
+    color: #647b90;
+    font-size: 13px;
+}
+
+#weather-icon {
+    width: 90px;
+    height: 90px;
+    margin-top: 8px;
+}
+
+#temperature {
+    font-size: 45px;
+    color: #087fc9;
+}
+
+#condition {
+    margin: 8px 0 22px;
+    font-size: 16px;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.detail {
+    padding: 12px 5px;
+    border-radius: 12px;
+    background: white;
+    overflow-wrap: anywhere;
+}
+
+.detail span {
+    display: block;
+    margin-bottom: 8px;
+    color: #647b90;
+    font-size: 12px;
+}
+
+.detail strong {
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 25px;
+    color: #647b90;
+    font-size: 12px;
+}
+
+@media (max-width: 380px) {
+    .weather-container {
+        padding: 20px 14px;
+    }
+
+    #weather-form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
